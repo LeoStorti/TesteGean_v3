@@ -46,10 +46,10 @@ namespace SistemaCadastro
             }
         }
 
-        internal void RetornaDados()
-        {
-            throw new NotImplementedException();
-        }
+        //public void RetornaDados()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         //internal void RetornaDados()
         //{

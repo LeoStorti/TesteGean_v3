@@ -243,7 +243,7 @@ namespace SistemaCadastro
         {
             {
                 // Cria uma instância do formulário de cadastro de clientes
-                NovoUsuario cadastroForm = new NovoUsuario();
+                NovoFornecedor cadastroForm = new NovoFornecedor();
 
                 // Exibe o formulário de cadastro de clientes
                 cadastroForm.Show();
@@ -264,7 +264,7 @@ namespace SistemaCadastro
         {
             {
                 // Cria uma instância do formulário de cadastro de clientes
-                NovoUsuario cadastroForm = new NovoUsuario();
+                NovoFornecedor cadastroForm = new NovoFornecedor();
 
                 // Exibe o formulário de cadastro de clientes
                 cadastroForm.Show();
@@ -281,7 +281,7 @@ namespace SistemaCadastro
         {
             {
                 // Cria uma instância do formulário de cadastro de clientes
-                NovoUsuario cadastroForm = new NovoUsuario();
+                NovoFornecedor cadastroForm = new NovoFornecedor();
 
                 // Exibe o formulário de cadastro de clientes
                 cadastroForm.Show();
