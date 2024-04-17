@@ -13,13 +13,24 @@ using System.Data.SqlClient;
 namespace SistemaCadastro // Projeto
 {
     public partial class NovoFornecedor : Form
+
+
     {
-        public NovoFornecedor()
+        private int mfornecedorId;
+
+        public static DataTable DataSource { get; internal set; }
+
+        public NovoFornecedor(int lfornecedorId)
         {
+            mfornecedorId = lfornecedorId;
             InitializeComponent();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        public NovoFornecedor()
+        {
+        }
+
+        public void btnSalvar_Click(object sender, EventArgs e)
         {
             // Criando uma instância de ConexaoBanco
             ConexaoBanco conexaoBanco = new ConexaoBanco();
@@ -88,12 +99,63 @@ namespace SistemaCadastro // Projeto
 
         private void NovoUsuario_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'banco_LeoDataSet4.Produtos'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtosTableAdapter.Fill(this.banco_LeoDataSet4.Produtos);
-            //DivideByZeroException 345
+            {
+                // Verificar se há um ID de fornecedor válido
+                if (mfornecedorId > 0)
+                {
+                    // Criar uma instância da classe de acesso aos dados
+                    ConexaoBanco conexaoBanco = new ConexaoBanco();
+
+                    try
+                    {
+                        // Consultar o banco de dados para obter os dados do fornecedor com base no ID
+                        string query = "SELECT * FROM CadastroFornecedor WHERE Id = @Id";
+                        SqlCommand cmd = new SqlCommand(query, conexaoBanco.mConexao);
+                        cmd.Parameters.AddWithValue("@Id", mfornecedorId);
+
+                        // Abrir a conexão
+                        conexaoBanco.mConexao.Open();
+
+                        // Executar o comando SQL e obter o leitor de dados
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        // Verificar se há linhas retornadas
+                        if (reader.HasRows)
+                        {
+                            // Ler os dados do fornecedor e preencher os campos do formulário
+                            while (reader.Read())
+                            {
+                                tb_username.Text = reader["Nome"].ToString();
+                                tb_cnpj.Text = reader["CNPJ"].ToString();
+                                tb_endereço.Text = reader["Endereco"].ToString();
+                                //n_nivel.Value = Convert.ToInt32(reader["Nivel"]);
+                                // Preencher outros campos conforme necessário
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nenhum fornecedor encontrado com o ID especificado.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao recuperar os dados do fornecedor: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Fechar a conexão com o banco de dados
+                        conexaoBanco.mConexao.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ID de fornecedor inválido.");
+                    this.Close(); // Fechar o formulário se o ID do fornecedor não for válido
+                }
+            }
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+            private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
         }
@@ -105,46 +167,12 @@ namespace SistemaCadastro // Projeto
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            {
-                // Verifica se o clique ocorreu em uma célula válida
-                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-                {
-                    // Obtém o ID do fornecedor selecionado
-                    int fornecedorId = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["Id"].Value);
 
-                    // Consulta SQL para recuperar os produtos relacionados ao fornecedor selecionado
-                    string query = "SELECT * FROM Produtos WHERE FornecedorId = @FornecedorId";
-
-                    // Executa a consulta SQL
-                    DataTable produtosTable = null;
-                    using (SqlConnection connection = new SqlConnection("sua_string_de_conexao"))
-                    {
-                        using (SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            // Adiciona o parâmetro @FornecedorId à consulta
-                            command.Parameters.AddWithValue("@FornecedorId", fornecedorId);
-
-                            // Abre a conexão com o banco de dados
-                            connection.Open();
-
-                            // Executa o comando SQL e preenche o DataTable com os resultados
-                            using (SqlDataReader reader = command.ExecuteReader())
-                            {
-                                produtosTable = new DataTable();
-                                produtosTable.Load(reader);
-                            }
-                        }
-                    }
-
-                    // Preenche a DataGridView de produtos com os dados obtidos
-                    dataGridView2.DataSource = produtosTable;
-                }
-            }
         }
     }
 }

@@ -52,8 +52,7 @@ namespace SistemaCadastro
             this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.banco_LeoDataSet4 = new SistemaCadastro.Banco_LeoDataSet4();
             this.produtosTableAdapter = new SistemaCadastro.Banco_LeoDataSet4TableAdapters.ProdutosTableAdapter();
-            this.btnPesquisar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.cadastroFornecedorTableAdapter1 = new SistemaCadastro.Banco_LeoDataSet1TableAdapters.CadastroFornecedorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.n_nivel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
@@ -220,30 +219,15 @@ namespace SistemaCadastro
             // 
             this.produtosTableAdapter.ClearBeforeFill = true;
             // 
-            // btnPesquisar
+            // cadastroFornecedorTableAdapter1
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(13, 270);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(255, 20);
-            this.btnPesquisar.TabIndex = 12;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(275, 267);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 13;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.cadastroFornecedorTableAdapter1.ClearBeforeFill = true;
             // 
             // NovoFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 570);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.nivel);
             this.Controls.Add(this.n_nivel);
@@ -304,7 +288,6 @@ namespace SistemaCadastro
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fornecedorIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox btnPesquisar;
-        private System.Windows.Forms.Button btnBuscar;
+        private Banco_LeoDataSet1TableAdapters.CadastroFornecedorTableAdapter cadastroFornecedorTableAdapter1;
     }
 }

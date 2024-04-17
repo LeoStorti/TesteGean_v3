@@ -71,5 +71,10 @@ namespace SistemaCadastro
                 }
             }
         }
+
+        private void NovoProduto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,12 +18,6 @@ namespace SistemaCadastro
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.nivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cadastroFornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.banco_LeoDataSet1 = new SistemaCadastro.Banco_LeoDataSet1();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -39,6 +33,12 @@ namespace SistemaCadastro
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastroFornecedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.banco_LeoDataSet1)).BeginInit();
@@ -54,7 +54,7 @@ namespace SistemaCadastro
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
+            this.Id,
             this.nomeDataGridViewTextBoxColumn,
             this.cNPJDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn,
@@ -66,43 +66,6 @@ namespace SistemaCadastro
             this.dataGridView1.Size = new System.Drawing.Size(468, 185);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            // 
-            // cNPJDataGridViewTextBoxColumn
-            // 
-            this.cNPJDataGridViewTextBoxColumn.DataPropertyName = "CNPJ";
-            this.cNPJDataGridViewTextBoxColumn.HeaderText = "CNPJ";
-            this.cNPJDataGridViewTextBoxColumn.Name = "cNPJDataGridViewTextBoxColumn";
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            // 
-            // ativoDataGridViewCheckBoxColumn
-            // 
-            this.ativoDataGridViewCheckBoxColumn.DataPropertyName = "Ativo";
-            this.ativoDataGridViewCheckBoxColumn.HeaderText = "Ativo";
-            this.ativoDataGridViewCheckBoxColumn.Name = "ativoDataGridViewCheckBoxColumn";
-            // 
-            // nivelDataGridViewTextBoxColumn
-            // 
-            this.nivelDataGridViewTextBoxColumn.DataPropertyName = "Nivel";
-            this.nivelDataGridViewTextBoxColumn.HeaderText = "Nivel";
-            this.nivelDataGridViewTextBoxColumn.Name = "nivelDataGridViewTextBoxColumn";
             // 
             // cadastroFornecedorBindingSource
             // 
@@ -203,6 +166,43 @@ namespace SistemaCadastro
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            // 
+            // cNPJDataGridViewTextBoxColumn
+            // 
+            this.cNPJDataGridViewTextBoxColumn.DataPropertyName = "CNPJ";
+            this.cNPJDataGridViewTextBoxColumn.HeaderText = "CNPJ";
+            this.cNPJDataGridViewTextBoxColumn.Name = "cNPJDataGridViewTextBoxColumn";
+            // 
+            // enderecoDataGridViewTextBoxColumn
+            // 
+            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            // 
+            // ativoDataGridViewCheckBoxColumn
+            // 
+            this.ativoDataGridViewCheckBoxColumn.DataPropertyName = "Ativo";
+            this.ativoDataGridViewCheckBoxColumn.HeaderText = "Ativo";
+            this.ativoDataGridViewCheckBoxColumn.Name = "ativoDataGridViewCheckBoxColumn";
+            // 
+            // nivelDataGridViewTextBoxColumn
+            // 
+            this.nivelDataGridViewTextBoxColumn.DataPropertyName = "Nivel";
+            this.nivelDataGridViewTextBoxColumn.HeaderText = "Nivel";
+            this.nivelDataGridViewTextBoxColumn.Name = "nivelDataGridViewTextBoxColumn";
+            // 
             // FornecedoresForm
             // 
             this.ClientSize = new System.Drawing.Size(766, 453);
@@ -236,6 +236,68 @@ namespace SistemaCadastro
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            {
+                // Verificar se o evento foi acionado pelo botão na célula
+                DataGridViewColumn columnId = dataGridView1.Columns["Id"];
+                if (columnId != null && e.ColumnIndex == columnId.Index && e.RowIndex >= 0)
+                {
+                    // Obter o Id do fornecedor selecionado na célula clicada
+                    int fornecedorId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+
+                    // Criar uma instância do formulário NovoFornecedor, passando o Id do fornecedor selecionado
+                    NovoFornecedor novoFornecedor = new NovoFornecedor(fornecedorId);
+
+                    // Exibir o formulário NovoFornecedor
+                    novoFornecedor.Show();
+                }
+                else
+                    MessageBox.Show("Algum problema aconteceu");
+            }
+
+            //-------------------------------------------------------------------------- Codigo antigo abaixo
+            //{
+            //    // Cria uma instância do formulário de cadastro de clientes
+            //    NovoFornecedor cadastroForm = new NovoFornecedor();
+
+            //    // Exibe o formulário de cadastro de clientes
+            //    cadastroForm.Show();
+
+            //}
+            //-------------------------------------------------------------------------- Codigo antigo abaixo
+            //// Verifica se o clique ocorreu em uma célula válida
+            //if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            //{
+            //    // Obtém o ID do fornecedor selecionado
+            //    int fornecedorId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+
+            //    // Consulta SQL para recuperar os produtos relacionados ao fornecedor selecionado
+            //    string query = "SELECT * FROM Produtos WHERE FornecedorId = @FornecedorId";
+
+            //    // Executa a consulta SQL
+            //    DataTable produtosTable = null;
+            //    using (SqlConnection connection = new SqlConnection("sua_string_de_conexao"))
+            //    {
+            //        using (SqlCommand command = new SqlCommand(query, connection))
+            //        {
+            //            // Adiciona o parâmetro @FornecedorId à consulta
+            //            command.Parameters.AddWithValue("@FornecedorId", fornecedorId);
+
+            //            // Abre a conexão com o banco de dados
+            //            connection.Open();
+
+            //            // Executa o comando SQL e preenche o DataTable com os resultados
+            //            using (SqlDataReader reader = command.ExecuteReader())
+            //            {
+            //                produtosTable = new DataTable();
+            //                produtosTable.Load(reader);
+            //            }
+            //        }
+            //    }
+
+            //    // Preenche a DataGridView de produtos com os dados obtidos
+            //    NovoFornecedor.DataSource = produtosTable;
+            //}
+
 
         }
 
@@ -257,6 +319,8 @@ namespace SistemaCadastro
             this.cadastroFornecedorTableAdapter.Fill(this.banco_LeoDataSet1.CadastroFornecedor);
             // TODO: esta linha de código carrega dados na tabela 'banco_LeoDataSet.Usuario'. Você pode movê-la ou removê-la conforme necessário.
             this.usuarioTableAdapter.Fill(this.banco_LeoDataSet.Usuario);
+
+
 
         }
 

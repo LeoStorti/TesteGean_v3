@@ -123,6 +123,7 @@ namespace SistemaCadastro
             this.Controls.Add(this.lblNomeProduto);
             this.Name = "NovoProduto";
             this.Text = "NovoProduto";
+            this.Load += new System.EventHandler(this.NovoProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnQuantidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

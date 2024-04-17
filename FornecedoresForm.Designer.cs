@@ -44,14 +44,14 @@ namespace SistemaCadastro
         private Banco_LeoDataSet1 banco_LeoDataSet1;
         private BindingSource cadastroFornecedorBindingSource;
         private Banco_LeoDataSet1TableAdapters.CadastroFornecedorTableAdapter cadastroFornecedorTableAdapter;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem consultaToolStripMenuItem;
+        private ToolStripMenuItem cadastroToolStripMenuItem;
+        private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn cNPJDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
         private DataGridViewCheckBoxColumn ativoDataGridViewCheckBoxColumn;
         private DataGridViewTextBoxColumn nivelDataGridViewTextBoxColumn;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem consultaToolStripMenuItem;
-        private ToolStripMenuItem cadastroToolStripMenuItem;
     }
 }

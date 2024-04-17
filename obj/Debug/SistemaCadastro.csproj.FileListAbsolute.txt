@@ -19,9 +19,6 @@ C:\Users\ferre\OneDrive\Área de Trabalho\SistemaCadastro 2\SistemaCadastro\obj\
 C:\Users\ferre\OneDrive\Área de Trabalho\SistemaCadastro 2\SistemaCadastro\obj\Debug\SistemaCadastro.exe
 C:\Users\ferre\OneDrive\Área de Trabalho\SistemaCadastro 2\SistemaCadastro\obj\Debug\SistemaCadastro.pdb
 C:\Users\ferre\OneDrive\Área de Trabalho\SistemaCadastro 2\SistemaCadastro\obj\Debug\SistemaCadastro.csproj.AssemblyReference.cache
-C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\bin\Debug\SistemaCadastro.exe.config
-C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\bin\Debug\SistemaCadastro.exe
-C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\bin\Debug\SistemaCadastro.pdb
 C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\obj\Debug\SistemaCadastro.FornecedoresForm.resources
 C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\obj\Debug\SistemaCadastro.FrmLogin.resources
 C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\obj\Debug\SistemaCadastro.FrmPrincipal.resources
@@ -31,5 +28,9 @@ C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\obj\Debug\SistemaCadastro
 C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\obj\Debug\SistemaCadastro.Properties.Resources.resources
 C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\obj\Debug\SistemaCadastro.csproj.GenerateResource.cache
 C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\obj\Debug\SistemaCadastro.csproj.CoreCompileInputs.cache
+C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\bin\Debug\SistemaCadastro.exe.config
+C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\bin\Debug\SistemaCadastro.exe
+C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\bin\Debug\SistemaCadastro.pdb
 C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\obj\Debug\SistemaCadastro.exe
 C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\obj\Debug\SistemaCadastro.pdb
+C:\Users\ferre\OneDrive\Área de Trabalho\TesteGean_v3\obj\Debug\SistemaCadastro.csproj.AssemblyReference.cache
