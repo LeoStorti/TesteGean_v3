@@ -242,10 +242,10 @@ namespace SistemaCadastro
                 if (columnId != null && e.ColumnIndex == columnId.Index && e.RowIndex >= 0)
                 {
                     // Obter o Id do fornecedor selecionado na célula clicada
-                    int fornecedorId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+                    int mfornecedorId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
 
                     // Criar uma instância do formulário NovoFornecedor, passando o Id do fornecedor selecionado
-                    NovoFornecedor novoFornecedor = new NovoFornecedor(fornecedorId);
+                    NovoFornecedor novoFornecedor = new NovoFornecedor(mfornecedorId);
 
                     // Exibir o formulário NovoFornecedor
                     novoFornecedor.Show();

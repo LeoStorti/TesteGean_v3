@@ -131,10 +131,22 @@ namespace SistemaCadastro // Projeto
                                 //n_nivel.Value = Convert.ToInt32(reader["Nivel"]);
                                 // Preencher outros campos conforme necessário
                             }
+                            conexaoBanco.mConexao.Close();
+
+                            // Carregar os produtos relacionados ao fornecedor na grid
+                            string produtosQuery = "SELECT * FROM Produtos WHERE FornecedorId = @FornecedorId";
+                            SqlCommand produtosCmd = new SqlCommand(produtosQuery, conexaoBanco.mConexao);
+                            produtosCmd.Parameters.AddWithValue("@FornecedorId", mfornecedorId);
+                            SqlDataAdapter adapter = new SqlDataAdapter(produtosCmd);
+                            DataTable produtosTable = new DataTable();
+                            adapter.Fill(produtosTable);
+
+                            // Definir a fonte de dados da grid como a tabela de produtos
+                            dataGridView2.DataSource = produtosTable;
                         }
                         else
                         {
-                            MessageBox.Show("Nenhum fornecedor encontrado com o ID especificado.");
+                            MessageBox.Show("Nenhum fornecedor encontrado com esse ID .");
                         }
                     }
                     catch (Exception ex)
