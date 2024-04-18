@@ -42,7 +42,7 @@ namespace SistemaCadastro
         private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             {
-                //    // Criando uma instância do formulário de cadastro de fornecedores
+                // Criando uma instância do formulário de cadastro de fornecedores
                 FornecedoresForm fornecedoresForm = new FornecedoresForm();
 
                 // Exibindo o formulário de cadastro de fornecedores

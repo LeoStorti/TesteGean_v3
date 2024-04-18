@@ -74,6 +74,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Banco_LeoDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Banco_LeoDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Banco_LeoDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FornecedoresForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +201,17 @@
     </None>
     <None Include="Banco_LeoDataSet4.xss">
       <DependentUpon>Banco_LeoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Banco_LeoDataSet5.xsc">
+      <DependentUpon>Banco_LeoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Banco_LeoDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Banco_LeoDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Banco_LeoDataSet5.xss">
+      <DependentUpon>Banco_LeoDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -6,7 +6,7 @@ namespace SistemaCadastro
 {
     public partial class FornecedoresForm : Form
     {
-        public FornecedoresForm()
+        public FornecedoresForm(int mfornecedorId)
         {
             InitializeComponent();
         }
@@ -53,5 +53,22 @@ namespace SistemaCadastro
         private DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
         private DataGridViewCheckBoxColumn ativoDataGridViewCheckBoxColumn;
         private DataGridViewTextBoxColumn nivelDataGridViewTextBoxColumn;
+        private TabControl tabConsulta;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private NumericUpDown n_nivel;
+        private CheckBox btnAtivo;
+        private Button btnSalvar;
+        private TextBox tb_endereço;
+        private Label label3;
+        private TextBox tb_cnpj;
+        private Label label2;
+        private TextBox tb_username;
+        private Button btnCancelar;
+        private Label label1;
+        private DataGridView dataGridView2;
+        private Banco_LeoDataSet5 banco_LeoDataSet5;
+        private BindingSource cadastroFornecedorBindingSource1;
+        private Banco_LeoDataSet5TableAdapters.CadastroFornecedorTableAdapter cadastroFornecedorTableAdapter1;
     }
 }
